@@ -46,7 +46,7 @@ public class MouseManager : MonoBehaviour {
 
 
 	private void mouseOverEnemy(GameObject hitObject){
-		Debug.Log ("**************************************");
+		Debug.Log ("**************666*****************");
 		if(Input.GetMouseButtonDown(0)){
 			clickedGameObject = hitObject;
 			hitObject.GetComponentInChildren<Transform> ().Rotate (new Vector3 (0, 80, 0));
@@ -55,6 +55,7 @@ public class MouseManager : MonoBehaviour {
 		if (Input.GetMouseButtonUp (0)) {
 			
 		}
+
 	}
 
 }

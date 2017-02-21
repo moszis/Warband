@@ -8,6 +8,7 @@ public class Hex : MonoBehaviour {
 	public float zPos;
 	public int xCount;
 	public int zCount;
+    public bool occupied;
 
 	private string defaultMaterialLoc  = "Prefabs/Hex/Materials/BlackHexBoarder";
 	private string selectedMaterialLoc = "Prefabs/Hex/Materials/RedHexBoarder";
@@ -18,6 +19,7 @@ public class Hex : MonoBehaviour {
 		this.xCount = xCount;
 		this.zCount = zCount;
 		this.tag = "Tile";
+
 		setName();
 		setMaterial();
 
@@ -54,4 +56,10 @@ public class Hex : MonoBehaviour {
 		}
 
 	}
+
+    public bool occupyTile(int type, GameObject gameObject)
+    {
+        this.occupied = true;
+        return true;
+    }
 }

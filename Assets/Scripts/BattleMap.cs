@@ -10,6 +10,7 @@ public class BattleMap : MonoBehaviour {
 	int mapTileHeight = 15;
 	float xOffSet = 0.882f;
 	float zOffSet = 0.764f;
+    
 
 	void Start () {
 
@@ -40,6 +41,7 @@ public class BattleMap : MonoBehaviour {
 				hex_obj.transform.SetParent (this.transform);
 
 				hex_obj.isStatic = true;
+                hex_obj.name = x + "_" + z;
 
 			}
 		}
@@ -69,7 +71,7 @@ public class BattleMap : MonoBehaviour {
 					xPos += xOffSet / 2;	
 				}
 
-			
+			    if(Random.Range(1, 10) == 5)
 				Instantiate (enemy_obj, new Vector3(xPos, 0, zPos), Quaternion.identity);
 
 			}
